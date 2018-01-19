@@ -34,6 +34,7 @@ echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
 echo "--- Instalando MySQL, Phpmyadmin e alguns outros modulos ---"
+# caso o linux seja > Versão 16, instale o mysql-server-5.7
 sudo apt-get install mysql-server-5.5 mysql-client phpmyadmin --assume-yes --force-yes
 
 echo "--- Instalando PHP, Apache e alguns modulos ---"
