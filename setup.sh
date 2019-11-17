@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "---- Iniciando instalacao do ambiente de Desenvolvimento PHP [EspecializaTI] ---"
-
 echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
@@ -35,15 +33,15 @@ sudo apt-get update
 
 echo "--- Instalando MySQL, Phpmyadmin e alguns outros modulos ---"
 # caso o linux seja > Versão 16, instale o mysql-server-5.7
-sudo apt-get install mysql-server-5.5 mysql-client phpmyadmin --assume-yes --force-yes
+sudo apt-get install mysql-server-5.7 mysql-client phpmyadmin --assume-yes --force-yes
 
 echo "--- Instalando PHP, Apache e alguns modulos ---"
-sudo apt-get install php7.1 php7.1-common --assume-yes --force-yes
-sudo apt-get install php7.1-cli libapache2-mod-php7.1 php7.1-mysql php7.1-curl php-memcached php7.1-dev php7.1-mcrypt php7.1-sqlite3 php7.1-mbstring zip unzip --assume-yes --force-yes
+sudo apt-get install php7.3 php7.3-common --assume-yes --force-yes
+sudo apt-get install php7.3-cli libapache2-mod-php7.3 php7.3-mysql php7.3-curl php-memcached php7.3-dev php7.3-mcrypt php7.3-sqlite3 php7.3-mbstring apt-get install php7.3-gd zip unzip --assume-yes --force-yes
 
-echo "--- Habilitando o PHP 7.1 ---"
+echo "--- Habilitando o PHP 7.3 ---"
 sudo a2dismod php5
-sudo a2enmod php7.1
+sudo a2enmod php7.3
 
 echo "--- Habilitando mod-rewrite do Apache ---"
 sudo a2enmod rewrite
@@ -57,7 +55,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 echo "--- Instalando Banco NoSQL -> Redis <- ---" 
 sudo apt-get install redis-server --assume-yes
-sudo apt-get install php7.1-redis --assume-yes
+sudo apt-get install php7.3-redis --assume-yes
 
 # Instale apartir daqui o que você desejar 
 
